@@ -62,7 +62,7 @@ This will start the webserver on [localhost](http://127.0.0.1:8000/).
 | --- | --- | 
 
 
-| Dedicated Diet Plan | ![Final Diet Plan](/Project-Demo/dietplan-details.png) |
+| Dedicated Diet Plan | ![Final Diet Plan](/Project-Demo/dietplan_result.png) |
 | --- | --- | 
 
 + Contact Us
