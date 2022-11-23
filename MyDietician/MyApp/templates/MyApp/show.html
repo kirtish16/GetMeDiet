@@ -1,0 +1,119 @@
+{% extends 'MyApp/base.html' %} 
+{% block stylefile %} 
+{% load static %}
+<link rel="stylesheet" href="{% static 'ShowDietPlan/style.css' %}"> {% endblock %} {% block content %}
+
+<section class="intro">
+
+
+    <div class="row">
+        <div class="column strtt" style="background-color:#aaa;">
+
+
+            <div class="container">
+                <div class="title">Your diet plan</div>
+                <div class="content">
+                    <div class="mealtime">Breakfast</div>
+
+                    <div class="mealList">
+
+                        <ul>
+                            <li>
+                                {{ BreakfastName.name }}
+                                <div style="margin-top:-5%;padding-left: 4%;">{{BreakfastName.amount}} Serving</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mealtime">
+                        Lunch
+                    </div>
+                    <div class="mealList">
+
+                        <ul>
+                            <li>
+                                {{ LunchName.name }}
+                                <div style="margin-top:-5%;padding-left: 4%;">{{LunchName.amount}} Serving</div>
+
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mealtime">
+                        Dinner
+                    </div>
+                    <div class="mealList">
+
+                        <ul>
+                            <li>
+                                {{ DinnerName.name }}
+                                <div style="margin-top:-5%;padding-left: 4%;">{{DinnerName.amount}} Serving</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="column" style="background-color:rgb(97, 25, 25);">
+
+            <div id="piechart_3d" style="height:85%;width:100%;"></div>
+            <div id="tcal">Total Calories consumed: <span>00</span></div>
+            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+            <script type="text/javascript">
+                const yourCal = document.getElementById("tcal");
+                var Bcal = "{{BCal}}";
+                var Lcal = "{{LCal}}";
+                var Dcal = "{{DCal}}";
+
+                Bcal = parseInt(Bcal);
+                Lcal = parseInt(Lcal);
+                Dcal = parseInt(Dcal);
+
+                console.log(Bcal);
+                console.log(Lcal);
+                console.log(Dcal);
+
+                console.log(typeof(Bcal));
+                google.charts.load("current", {
+                    packages: ["corechart"]
+                });
+                google.charts.setOnLoadCallback(drawChart);
+
+                function drawChart() {
+                    var data = google.visualization.arrayToDataTable([
+                        ['Time', 'Calories'],
+                        ['Breakfast', Bcal],
+                        ['Lunch', Lcal],
+                        ['Dinner', Dcal]
+                    ]);
+
+                    var fsize = 15;
+                    if (screen.width < 584) {
+                        fsize = 8;
+                    }
+                    var options = {
+                        title: 'Calorie Intake',
+                        is3D: true,
+                        fontSize: fsize,
+                        titleTextStyle: {
+                            color: "red",
+                            fontSize: fsize + 5,
+                            bold: true
+                        }
+                    };
+
+                    var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+                    chart.draw(data, options);
+
+                    yourCal.innerHTML = `Total Calories consumed: <span style="color:pink;"> ${Bcal + Lcal + Dcal} kcal </span>`;
+
+                }
+            </script>
+
+            <script src="js/debounce.js"></script>
+
+        </div>
+    </div>
+
+
+</section>
+{% endblock %}

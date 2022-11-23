@@ -1,0 +1,93 @@
+{% extends 'MyApp/base.html' %} {% block stylefile %} {% load static %}
+<link rel="stylesheet" href="{% static 'DietPlan/style.css' %}"> {% endblock %} {% block content %}
+
+<section class="start">
+    <div class="main">
+        <strong>Want to get a personal diet plan ?</strong>
+        <div id="oneline">
+            <i>Just fill the details below and ready!</i>
+        </div>
+    </div>
+</section>
+
+
+<section class="intro">
+    <div class="container">
+        <div class="title">Get a Diet Plan</div>
+        <div class="content">
+            <form action="{% url 'dietplan' %}" method="post">
+                {% csrf_token %}
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Weight : </span>
+                        <input name="weight" type="text" placeholder="In kg" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="ht" class="details">Height : </label>
+                        <input name="height" type="text" placeholder="In cm" id="ht" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Age : </span>
+                        <input name="age" type="number" placeholder="In years    " required>
+                    </div>
+
+                    <div class="gender-details">
+                        <span class="gender-title">Gender :</span>
+                        <input value="m" type="radio" name="gender" id="dot-1">
+                        <input value="f" type="radio" name="gender" id="dot-2">
+                        <div class="category">
+                            <label for="dot-1">
+                                <span class="dot one"></span>
+                                <span class="gender">Male</span>
+                            </label>
+                            <label for="dot-2">
+                    <span class="dot two"></span>
+                    <span class="gender">Female</span>
+                </label>
+                        </div>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">Exercise: </span>
+                        <select name="activity_level">
+                                <option selected="" value="S">Sedentary</option>
+                                <option value="L">Lightly Active</option>
+                                <option value="M">Moderately Active</option>
+                                <option value="V">Very Active</option>
+                                <option value="E">Extremely Active</option></select>
+                        </select>
+                    </div>
+                    <!-- For user details -->
+
+                    <div class="target">
+                        <ul>
+                            <span class="details" style="margin-right: 20px;">Target :</span>
+                            <li>
+                                <input type='radio' value='0.8' name='bodyTarget' id='radio1' />
+                                <label for='radio1'>Reduce Weight</label>
+                            </li>
+                            <li>
+                                <input type='radio' value='1' name='bodyTarget' id='radio2' checked/>
+                                <label for='radio2'>Maintain Weight</label>
+                            </li>
+                            <li>
+                                <input type='radio' value='1.2' name='bodyTarget' id='radio3' />
+                                <label for='radio3'>Gain Weight</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="button">
+                    <input type="submit" value="Generate">
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+{% if msg %}
+<script>
+    alert('{{ msg }}');
+</script>
+{% endif %} {% endblock %}

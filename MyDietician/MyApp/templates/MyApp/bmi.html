@@ -1,0 +1,59 @@
+{% extends 'MyApp/base.html' %} {% block stylefile %} {% load static %}
+<link rel="stylesheet" href="{% static 'BMI/style.css' %}"> {% endblock %} {% block content %}
+
+<section class="intro">
+    <div class="intro-main">
+        <strong>Want to check in which category you fall.</strong>
+        <div id="oneline">
+            <i>See your BMI now!</i>
+        </div>
+    </div>
+</section>
+
+<!-- <h2>Calculate the BMI </h2> -->
+<section class="bmi-intro">
+
+    <div class="row">
+        <div class="column" style="background-color:#96cdff;">
+
+            <!-- <div class="main"> -->
+
+            <div id="guide">
+                <h2>Guide</h2>
+                <span style="color: #203560;font-size: 1.2em;font-weight: bold;line-height: 3;">What is BMI?</span>
+                <p>BMI or Body Mass Index is an indirect measure of your body composition or how much body fat you have.</p>
+                <br>
+                <p>
+                    BMI doesn't measure body fat directly, it uses your weight and height to determine whether you're classified as underweight, normal weight, overweight or obese.</p>
+                <br>
+                <p> This measurement correlates moderately well with other measurements of body fat such as skinfold measurements and underwater weighing, according to the Centers for Disease Control and Prevention.</p>
+                <br> <span style="color: #203560;font-size: 1.2em;font-weight: bold;line-height: 3;">What does a high BMI indicates?</span>
+                <p>The higher your BMI, the higher your risk for certain diseases such as heart disease, high blood pressure, type 2 diabetes, gallstones, breathing problems, and certain cancers.</p>
+            </div>
+
+        </div>
+        <div class="column" style="background-color:#96cdff;padding-bottom: 5vh;">
+
+            <div id="calculator">
+                <div id="brd">
+                    <h2>Calculate the BMI</h2>
+                    <div class="inp">
+                        <input type="number" name="bmi" id="weight" placeholder="Weight In KG" min="4" required>
+                        <input type="number" name="bmi" id="height" placeholder="Height In CM" min="40" required>
+                    </div>
+                    <input type="submit" value="Calculate" id="calculate">
+                    <div id="yourBMI">Your BMI Is : <span>00</span></div>
+                    <div id="bmiinfo"><span></span> </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+</section>
+
+<script src="{% static 'BMI/script.js' %}"></script>
+
+{% endblock %}

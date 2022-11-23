@@ -1,0 +1,25 @@
+{% extends 'MyApp/base.html' %} {% block stylefile %} {% load static %}
+<link rel="stylesheet" href="{% static 'ContactUs/style.css' %}"> {% endblock %} {% block content %}
+<div class="container">
+
+    <div class="banner">
+        Get in touch with us !
+    </div>
+
+    <form id="contact" action="{% url 'contactus' %}" method="post">
+        {% csrf_token %}
+        <h3>Contact Us</h3>
+        <h4>If you have any questions or need help, please fill out the form below</h4>
+
+        <input name="user_name" placeholder="Your name" type="text" tabindex="1" required autofocus>
+
+        <input name="email" placeholder="Your Email Address" type="email" tabindex="2" required>
+
+        <textarea name="message" placeholder="Type your message here...." tabindex="5" required></textarea>
+
+        <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+
+    </form>
+    <h3>{{result}}</h3>
+</div>
+{% endblock %}

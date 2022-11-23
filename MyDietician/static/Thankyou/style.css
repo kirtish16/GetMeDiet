@@ -1,0 +1,21 @@
+.intro {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    padding-top: 45vh;
+    background: #96cdff;
+    height: 100vh;
+    width: 100vw;
+}
+
+img {
+    height: 50%;
+    width: 40%;
+}
+
+
+/* .done {
+    width: 50vw;
+    height: 50vh;
+    margin-top: -150px;
+} */

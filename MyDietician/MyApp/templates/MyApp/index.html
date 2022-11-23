@@ -1,0 +1,36 @@
+{% extends 'MyApp/base.html' %} {% block stylefile %} {% load static %}
+<link rel="stylesheet" href="{% static 'Index/style.css' %}"> {% endblock %} {% block content %}
+<section class="intro">
+    <div class="main">
+        <strong>GetMe Diet</strong>
+        <div id="oneline">
+            <i>Your personal diet assistant</i>
+        </div>
+    </div>
+</section>
+
+<section class="services">
+    <div class="row">
+        <div class="column">
+            <div class="services-box">
+                <img src="{% static 'Images/fitness_stats.svg' %}" alt="Nothing" class="illustr">
+                <h3 class="service-info">Calculate your Body Mass Index and find out in which category you fall.</h3>                
+            </div>
+        </div>
+        <div class="column">
+            <div class="services-box">
+                <img src="{% static 'Images\diet_plan.svg' %}" alt="Nothing" class="illustr">
+                <h3 class="service-info">Get a diet plan according to your body and lifestyle.</h3>                
+            </div>
+    </div>
+    <div class="column">
+        <div class="services-box">
+            <img src="{% static 'Images/contactus.svg' %}" alt="Nothing" class="illustr" style="width:73%">
+            <h3 class="service-info">For more details or regarding any queries or suggestions, Contact Us. </h3>                
+        </div>
+    </div>
+</div>
+
+
+</section>
+{% endblock %}

@@ -1,0 +1,89 @@
+.intro {
+    width: 100%;
+    height: 100vh;
+    background: url("../Images/intro-header.jpg");
+    background-color: rgba(255, 255, 255, 0.6);
+    background-blend-mode: lighten;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.main {
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main #oneline i {
+    top: 50%;
+    left: 50%;
+    transform: translate(8%, 80%);
+    font-size: 1.3em;
+    color: #203592;
+}
+
+.main strong {
+    font-family: 'Dela Gothic One', cursive;
+    color: black;
+    font-size: 3em;
+    color: #203560;
+    font-weight: bolder;
+    text-transform: uppercase;
+    letter-spacing: 1vw;
+}
+
+@media screen and (max-width: 600px) {
+    .main strong {
+        font-size: 2em;
+    }
+}
+
+/* Styling for service section */
+
+.services{
+    height: 100%;
+    width: 100%;
+    background-color:rgb(175, 209, 239);
+  }
+  
+  .row{
+    height: 90vh;
+    padding-bottom: 5vh;
+  }
+  
+  .column {
+    text-align:center;
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 70vh;
+    padding-top: 15vh; 
+    background-color: rgb(175, 209, 239);
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
+  
+  .illustr{
+    padding-top: 10%;
+    padding-bottom: 10%;
+      width: 60%;
+  }
+  
+  .service-info{
+    padding: 7%;
+    font-size: xx-large;
+    color: black;
+  }

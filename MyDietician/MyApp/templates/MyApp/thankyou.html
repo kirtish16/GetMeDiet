@@ -1,0 +1,14 @@
+{% extends 'MyApp/base.html' %} {% block stylefile %} {% load static %}
+<link rel="stylesheet" href="{% static 'Thankyou/style.css' %}"> {% endblock %} {% block content %}
+
+<section class="intro">
+        <img src="{% static 'Images/message_sent.svg' %}" alt="" class="done">
+        <h3>
+            Your message has been sent.
+        </h3>
+
+        <h4>
+            Thank you for taking the time to contact us.
+        </h4>
+</section>
+{% endblock %}
