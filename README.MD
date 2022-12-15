@@ -45,33 +45,37 @@ This will start the webserver on [localhost](http://127.0.0.1:8000/).
 
 + Homepage 
 
-  ![Homepage](/Project-Demo/index.png)
+
+  ![Homepage](https://user-images.githubusercontent.com/55601319/207763594-6896eeda-68f0-4e81-a89d-dc303a465d49.png)
+
  
 + BMI Calculator
 
-  ![BMI](/Project-Demo/bmi.png)
- 
+  ![BMI](https://user-images.githubusercontent.com/55601319/207763630-1d5b027e-d0a3-42a2-af52-77710b463860.png)
+
 + Diet Planner 
 
-  ![Diet Plan](/Project-Demo/dietplan.png)
+  ![Diet Plan](https://user-images.githubusercontent.com/55601319/207763674-d1f3ad7c-f0a1-4235-9e39-a8d42b6956ef.png)
 
 + Diet Details
 
 
-| Filling User Details | ![User details](/Project-Demo/dietplan-details.png) |
+| Filling User Details | ![User details](https://user-images.githubusercontent.com/55601319/207763713-9fdd0228-fede-4915-8b7b-5cd8a1905336.png) |
 | --- | --- | 
 
 
-| Dedicated Diet Plan | ![Final Diet Plan](/Project-Demo/dietplan_result.png) |
+| Dedicated Diet Plan | ![Final Diet Plan](https://user-images.githubusercontent.com/55601319/207763771-bd7417b7-6a45-46d0-94a0-609475c71e43.png) |
 | --- | --- | 
+
 
 + Contact Us
 
-![Contact](/Project-Demo/contactus.png)
+![Contact](https://user-images.githubusercontent.com/55601319/207763814-2cde3ee9-d15a-4d28-9ec1-7805418f1d5a.png)
 
 
-| Successfully completed contact form | ![thank you](/Project-Demo/contactus-thanks.png) |
+| Successfully completed contact form | ![thank you](https://user-images.githubusercontent.com/55601319/207763855-4d106e36-e98d-429d-98f0-4a17822152ab.png) |
 | --- | --- | 
+
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
